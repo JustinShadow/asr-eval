@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ASRCTL_UV="${UV_BIN:-$HOME/.local/bin/uv}"
+
+if [[ ! -x "$ASRCTL_UV" ]]; then
+  printf 'uv 未找到：%s\n' "$ASRCTL_UV" >&2
+  exit 2
+fi
+
+exec "$ASRCTL_UV" run --directory "$REPO_ROOT/backend" python "$REPO_ROOT/tools/asrctl.py" "$@"

@@ -1,0 +1,28 @@
+# 本地/CI 密钥扫描配置（M10 §3.4）。
+# 默认规则之上只排除依赖、构建产物与已确认的合成测试标识；不要用宽泛白名单掩盖真实密钥。
+title = "ASR 评测平台密钥扫描"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "依赖、构建产物与测试中的合成模型键/示例幂等键"
+paths = [
+  '''(^|/)node_modules/''',
+  '''(^|/)backend/\.venv/''',
+  '''(^|/)web/dist/''',
+  '''(^|/)web/test-results/''',
+  '''(^|/)web/playwright-report/''',
+  '''(^|/)data/''',
+  '''(^|/)\.git/''',
+  '''(^|/)package-lock\.json$''',
+]
+regexes = [
+  # 设备模型键不是凭据；测试与文档用它构造部署快照。
+  '''qwen3-asr-1\.[78]b''',
+  # 文档示例中的一次性幂等键。
+  '''7d2f9c1e-2a44-4b0e-9c31-6f0a1d2e3b4c''',
+  # 测试断言的条目键由语料文件名派生，不是密钥。
+  '''test-SSB06930002\.wav''',
+  '''Beijing-1000234_7188a851''',
+]

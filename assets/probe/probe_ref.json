@@ -1,0 +1,49 @@
+{
+  "source": "synthetic_tts",
+  "sample_rate": 16000,
+  "text": "早上好，开始测试。你好，我听到了。我们一起说话。声音有重叠。识别结果包含逗号，还有句号。结束了吗？",
+  "segments": [
+    {
+      "speaker": "A",
+      "text": "早上好，开始测试。",
+      "start_ms": 0,
+      "end_ms": 1792,
+      "overlap": false
+    },
+    {
+      "speaker": "B",
+      "text": "你好，我听到了。",
+      "start_ms": 1792,
+      "end_ms": 3416,
+      "overlap": false
+    },
+    {
+      "speaker": "A",
+      "text": "我们一起说话。",
+      "start_ms": 3416,
+      "end_ms": 4704,
+      "overlap": true
+    },
+    {
+      "speaker": "B",
+      "text": "声音有重叠。",
+      "start_ms": 3904,
+      "end_ms": 5442,
+      "overlap": true
+    },
+    {
+      "speaker": "A",
+      "text": "识别结果包含逗号，",
+      "start_ms": 5442,
+      "end_ms": 7190,
+      "overlap": false
+    },
+    {
+      "speaker": "B",
+      "text": "还有句号。结束了吗？",
+      "start_ms": 7190,
+      "end_ms": 9482,
+      "overlap": false
+    }
+  ]
+}

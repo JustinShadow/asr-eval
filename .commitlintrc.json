@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "type-enum": [
+      2,
+      "always",
+      ["feat", "fix", "refactor", "perf", "test", "docs", "build", "ci", "chore", "revert"]
+    ],
+    "scope-enum": [
+      2,
+      "always",
+      ["api", "auth", "scoring", "dataset", "device", "runner", "report", "web", "deploy", "ci", "docs"]
+    ],
+    "subject-empty": [2, "never"],
+    "subject-full-stop": [2, "never", "."],
+    "header-max-length": [2, "always", 100],
+    "body-leading-blank": [1, "always"],
+    "footer-leading-blank": [1, "always"]
+  }
+}

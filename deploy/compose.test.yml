@@ -1,0 +1,20 @@
+# E2E 专用数据库：临时容器与 tmpfs，测试结束后由 tools/e2e.sh 删除。
+name: asr-eval-e2e
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: asr-eval-e2e-db
+    environment:
+      POSTGRES_USER: asr
+      POSTGRES_PASSWORD: asr
+      POSTGRES_DB: asr_eval_e2e
+    ports:
+      - "127.0.0.1:55432:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U asr -d asr_eval_e2e"]
+      interval: 2s
+      timeout: 3s
+      retries: 30

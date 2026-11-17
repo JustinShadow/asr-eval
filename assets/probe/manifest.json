@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-11-05",
+  "source": "Microsoft Edge 中文神经语音合成；经用户授权生成的合成测试音频",
+  "format": "16kHz / 16bit / mono / PCM WAV",
+  "files": [
+    {
+      "file": "probe_spk_A.wav",
+      "sha256": "221162cf2621a96bd1c2fbc4904cfcf5f38f9a37c63e97e543f10103fb8a5a7d",
+      "bytes": 192044,
+      "duration_ms": 6000,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width_bits": 16,
+      "rms_dbfs": -24.86,
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "text": "早上好，我是甲。今天我们测试语音识别。"
+    },
+    {
+      "file": "probe_spk_B.wav",
+      "sha256": "d0afd4cd3857a4f7ce1ec36829f6098f69e03692f2cd66ad2ae9edf715621408",
+      "bytes": 192044,
+      "duration_ms": 6000,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width_bits": 16,
+      "rms_dbfs": -24.86,
+      "voice": "zh-CN-YunxiNeural",
+      "text": "你好，我是乙。现在开始测试声纹识别。"
+    },
+    {
+      "file": "probe_two_spk_10s.wav",
+      "sha256": "43046a5cc89c3bf8cbff27d1f8ef9f405120a7008f72759eba7356051d56213a",
+      "bytes": 320044,
+      "duration_ms": 10000,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width_bits": 16,
+      "rms_dbfs": -24.86,
+      "voice": "zh-CN-XiaoxiaoNeural + zh-CN-YunxiNeural",
+      "text": "早上好，开始测试。你好，我听到了。我们一起说话。声音有重叠。识别结果包含逗号，还有句号。结束了吗？"
+    }
+  ]
+}

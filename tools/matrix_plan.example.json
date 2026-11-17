@@ -1,0 +1,48 @@
+{
+  "devices": [
+    {
+      "name": "205",
+      "host": "127.0.0.1",
+      "port": 18705,
+      "model": "etsstt",
+      "mode": "burst"
+    },
+    {
+      "name": "502",
+      "host": "192.168.133.2",
+      "port": 30025,
+      "model": "qwen3-asr-1.7b",
+      "mode": "stream"
+    },
+    {
+      "name": "600",
+      "host": "127.0.0.1",
+      "port": 18702,
+      "model": "asr-b",
+      "mode": "stream"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "AISHELL-1",
+      "kind": "aishell1",
+      "root": "/mnt/f/测试数据/测试文件/AI测试素材/开源数据集/aishell1/data_aishell",
+      "subset": "test",
+      "limit": 100
+    },
+    {
+      "name": "AISHELL-3",
+      "kind": "aishell3",
+      "root": "/mnt/f/测试数据/测试文件/AI测试素材/开源数据集/AISHELL-3/AISHELL-3",
+      "subset": "test",
+      "limit": 100
+    },
+    {
+      "name": "KeSpeech",
+      "kind": "kespeech",
+      "root": "/mnt/f/测试数据/测试文件/AI测试素材/开源数据集/kespeech",
+      "subset": "all",
+      "limit": 100
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+known_hosts="${ASR_E2E_SSH_KNOWN_HOSTS:-}"
+if [[ -n "$known_hosts" ]]; then
+  exec /usr/bin/sftp -o "UserKnownHostsFile=$known_hosts" -o StrictHostKeyChecking=yes "$@"
+fi
+exec /usr/bin/sftp "$@"

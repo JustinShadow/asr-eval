@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# 本地数据与密钥（绝不入库）
+data/
+.env
+.env.*
+secrets/
+
+# 前端
+node_modules/
+web/dist/
+web/test-results/
+web/playwright-report/
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+*:Zone.Identifier
+
+# 本机矩阵计划可能含设备地址；示例文件入库，实际计划不入库
+tools/matrix_plan.json
